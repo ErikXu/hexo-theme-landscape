@@ -8,7 +8,16 @@
         <%- render(theme.copyright, 'pug'); %>
       <% } %>
       &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
-      <%= __('powered_by') %> <a href="https://github.com/ErikXu/" target="_blank">Erik Xu</a>
+      <%= __('powered_by') %> <a href="https://github.com/ErikXu/" target="_blank">Erik Xu</a><br>
+      <!-- busuanzi_count -->
+      <% if (config.busuanzi_count.enable){ %>
+      总访问量：<span id="busuanzi_value_site_pv"></span>
+      总访客数：<span id="busuanzi_value_site_uv"></span>
+      <% } %>
+        <!-- busuanzi_count -->
     </div>
   </div>
+<% if (config.busuanzi_count.enable){ %>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<% } %>
 </footer>
