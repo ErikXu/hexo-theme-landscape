@@ -34,7 +34,9 @@
         </a>
       <% } %>
       <%- partial('post/tag') %>
+      <% if (!is_home()){%>
       <%- partial('busuanzi_count') %>
+      <% } %>
     </footer>
   </div>
   <% if (!index){ %>
